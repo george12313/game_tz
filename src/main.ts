@@ -4,7 +4,7 @@ import {Cards} from "./cards";
 import {Player} from "./player";
 import readline from "readline";
 
-function bootstrap() {
+function bootstrap(): void {
     const card = new Cards()
     const bet = new Bets(card)
     const player = new Player(100);

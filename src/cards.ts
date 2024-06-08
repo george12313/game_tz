@@ -1,4 +1,4 @@
-import {suits, values} from "./constants"
+import {suits, values} from "./constants";
 import {ICards} from "./types/cards";
 
 export type TCard = { suit: string, value: string }
@@ -23,7 +23,7 @@ export class Cards implements ICards {
         return deck;
     }
 
-    shuffleDeck() {
+    shuffleDeck(): void {
         for (let i = this.deck.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [this.deck[i], this.deck[j]] = [this.deck[j], this.deck[i]];
@@ -39,7 +39,7 @@ export class Cards implements ICards {
         return card
     }
 
-    compareCards(card1: TCard, card2: TCard) {
+    compareCards(card1: TCard, card2: TCard): number {
         const valueOrder = values;
         return valueOrder.indexOf(card1.value) - valueOrder.indexOf(card2.value);
     }

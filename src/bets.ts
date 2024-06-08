@@ -1,5 +1,5 @@
 import {Cards} from "./cards";
-import {EGuess} from "./types/guess"
+import {EGuess} from "./types/guess";
 import {Player} from "./player";
 import {EGameResult, TBetsHistory} from "./types/history";
 import {IBets} from "./types/bets";
@@ -14,7 +14,7 @@ export class Bets implements IBets {
         this.history = [];
     }
 
-    placeBet(player: Player, guess: EGuess, betAmount: number) {
+    placeBet(player: Player, guess: EGuess, betAmount: number): void {
         console.log("player", guess)
         if (this.cards.createDeck().length < 2) {
             console.log("Not enough cards to continue the game.");

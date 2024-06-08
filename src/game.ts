@@ -19,8 +19,8 @@ export class Game implements IGame {
 		this.bet = bet
 	}
 
-	 gameLoop() {
-		this.rl.question("Place your bet: ", (bet) => {
+	 gameLoop(): void {
+		this.rl.question("Place your bet: ", (bet: string) => {
 			const betAmount = parseFloat(bet);
 			if (isNaN(betAmount) || betAmount <= 0) {
 				console.log("Invalid bet amount.");
