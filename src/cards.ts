@@ -1,7 +1,5 @@
 import {suits, values} from "./constants";
-import {ICards} from "./types/cards";
-
-export type TCard = { suit: string, value: string }
+import {ICards, TCard} from "./types/cards";
 
 export class Cards implements ICards {
     private readonly deck: TCard[];

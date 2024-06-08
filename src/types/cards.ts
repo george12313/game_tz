@@ -1,4 +1,4 @@
-import {TCard} from "../cards";
+export type TCard = { suit: string, value: string }
 
 export interface ICards {
     createDeck(): TCard[];
