@@ -8,7 +8,7 @@ export class Player implements IPlayer {
 		this.balance = balance;
 		this.history = [];
 	}
-	getBalance() {
+	getBalance(): number {
 		return this.balance
 	}
 	placeBet(bet: number): boolean {
